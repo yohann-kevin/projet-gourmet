@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!--description-->
+    <meta name="description" content="Les fins gourmets. La référence de l'alimentation">
+    <!--mot clef-->
+    <meta name="keywords" content="gourmets,recette,cuisine">
+    <!--titre-->
+    <meta name="title" content="Les fins gourmets">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--icone-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!--liens vers feuille de style-->
+    <link rel="stylesheet" href="test/opti.css">
+    <title>Les fins gourmets</title>
+</head>
+
+<body>
+
+    <header class="bandeau">
+        <div id="cookie" class="sticky-top row bg-danger border border-top-0">
+            <span class="col-lg-9 col-sm-6">
+                <p class="text-light">En continuant votre navigation, vous acceptez l'utilisation de cookies.</p>
+            </span>
+            <div class="col-lg-3 col-sm-6">
+                <button class="accepter btn btn-danger" href="#" onclick="masqueCookie()">Accepter</button>
+                <button class="infoCookie btn btn-danger" target="_blank"><a href="https://www.google.com"> En savoir
+                        plus</a></button>
+            </div>
+        </div>
+        <div class="connexion container-fluid bg-danger">
+            <div class="row">
+                <!----bouton connexion/inscription---->
+                <div class="col-lg-6 col-sm-12" id="conect">
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalSign">
+                        Inscription
+                    </button>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalConnect">
+                        Connexion
+                    </button>
+                </div>
+                <!-- ---barre de recherche--- -->
+                <div class="navbar col-lg-6 col-sm-12 navbar-expand-sm bg-danger justify-content-end navbar-dark">
+                    <form class="form-inline row" action="/action_page.php">
+                        <input class="form-control col-lg-8 col-sm-12" type="text" placeholder="Entrée votre recherche">
+                        <button class="btn btn-dark text-light col-lg-4 col-sm-12" type="submit">Rechercher</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------------------------------- -->
+        <!-- The modalConnect -->
+        <div class="modal fade" id="modalConnect">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    
+                    <!-- Modal Header -->
+                    <div class="modal-header bg-danger text-light">
+                        <h4>Connexion</h4>
+                        <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <!--<form id="login" action="traitement.php" method="POST">-->
+                        <form class="login">
+                            <div class="form-group">
+                                <p><label for="emailConnect" class="text-dark">Votre Email</label>
+                                    <input type="email" name="email" id="emailConnect" placeholder="Votre Email"
+                                        class="form-control" required></p>
+                                <span id="forgetEmailConnect" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <p><label for="mdpConnect" class="text-dark">Mot de passe</label>
+                                    <input type="password" name="mdp" id="mdpConnect" placeholder="Votre mot de passe"
+                                        class="form-control" required> </p>
+                                <span id="forgetPasswordConnect" class="text-danger"></span>
+                            </div>
+                            <p>pas encore inscrit ?<button type="button" class="btn" data-toggle="modal"
+                                    data-target="#modalSign">Cliquer ici
+                                </button></p>
+                            <p>mot de passe oublier ?<a href="#"> Cliquer ici</a></p>
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer bg-danger">
+                        <p class="validé">
+                            <button class="btn btn-dark text-light" type="submit" id="boutonEnvoieConnect">Se
+                                connecter</button>
+                            <button class="btn btn-dark text-light" type="reset">Annuler</button>
+                        </p>
+                    </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <!-- The modalSign -->
+        <div class="modal fade" id="modalSign">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header bg-danger text-light">
+                        <h4>Inscription</h4>
+                        <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <!--<form id="login" action="traitement.php" method="POST">-->
+                        <form class="login">
+                            <div class="form">
+                                <!-- bouton radio M.-->
+                                <div class="blocRadioSign">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="mSign" name="civilite">
+                                        <label class="custom-control-label text-dark" for="mSign">M.</label>
+                                    </div>
+                                    <!-- bouton radio Mme-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="mmeSign" name="civilite">
+                                        <label class="custom-control-label text-dark" for="mmeSign">Mme.</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p>
+                                        <label for="nomSign" class="text-dark">Votre nom</label>
+                                        <input type="text" name="nom" id="nomSign" placeholder="tapez votre nom"
+                                            class="form-control" required>
+                                    </p><span id="forgetNameSign" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <p><label for="prenomSign" class="text-dark">Votre prénom</label>
+                                        <input type="text" name="prenom" id="prenomSign"
+                                            placeholder="tapez votre prénom" class="form-control" required>
+                                    </p><span id="forgetPrenomSign" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <p><label for="emailSign" class="text-dark">Votre Email</label>
+                                        <input type="email" name="email" id="emailSign" placeholder="Votre Email"
+                                            class="form-control" required>
+                                    </p><span id="forgetEmailSign" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <p><label for="telSign" class="text-dark">Numéro de tel</label>
+                                        <input type="tel" name="tel" id="telSign" placeholder="Votre numéro de tel"
+                                            class="form-control" required>
+                                    </p><span id="forgetTelSign" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <p><label for="mdpSign" class="text-dark">Mot de passe</label>
+                                        <input type="password" name="mdp" id="mdpSign" placeholder="Votre mot de passe"
+                                            class="form-control" required>
+                                    </p><span id="forgetMdpSign" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <p><label for="mdSignConfirm" class="text-dark">Confirmer mot de
+                                            passe</label>
+                                        <input type="password" name="mdp" id="mdpSignConfirm"
+                                            placeholder="Votre mot de passe" class="form-control" required>
+                                    </p><span id="forgetPasswordConfirm" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <p><label for="date" class="text-dark">Votre date de naissance</label>
+                                        <input class="form-control" type="date" name="date" id="dateSign"
+                                            placeholder="date de naissance" required>
+                                    </p>
+                                </div>
+                                <div id="preferance">
+                                    <p class="text-dark">vous préférez:
+                                        <div class="custom-control custom-checkbox text-dark">
+                                            <input type="checkbox" name="choix-plat" value="entrée" id="entrée"
+                                                class="custom-control-input" />
+                                            <label for="entrée" class="custom-control-label">Entrée</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox text-dark">
+                                            <input type="checkbox" name="choix-plat" value="plat" id="plat"
+                                                class="custom-control-input" />
+                                            <label for="plat" class="custom-control-label">plat</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox text-dark">
+                                            <input type="checkbox" name="choix-plat" value="dessert" id="dessert"
+                                                class="custom-control-input" />
+                                            <label for="dessert" class="custom-control-label">dessert</label>
+                                        </div>
+                                    </p>
+                                </div>
+                                <div class="form-group">
+                                    <p><label for="adresseSign" class="text-dark">Votre adresse</label>
+                                        <textarea name="message" id="adresseSign" placeholder="Votre adresse"
+                                            maxlength="100" required></textarea>
+                                    </p><span id="forgetAdress" class="text-danger"></span>
+                                </div>
+
+                            </div>
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer bg-danger">
+                        <p class="validé">
+                            <button class="btn btn-dark text-light" type="submit"
+                                id="boutonEnvoieSign">S'inscrire</button>
+                            <button class="btn btn-dark text-light" type="reset">Annuler</button>
+                        </p>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--  ------------------------------------------------------------------------------------- -->
+        <!--logo-->
+        <figure class="logo">
+            <img src="publique/image/logo/les-fins-gourmets2.jpg" alt="logo fins gourmets" class="img-fluid rounded">
+        </figure>
+        <!---barre de navigation--->
+        <nav class="navbar navbar-expand-lg bg-danger justify-content-center navbar-dark">
+            <!---menu burger--->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--navbar link-->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <!---liens--->
+                <ul class="navbar-nav" id="menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" id="navbardrop">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recette.html" id="navbardrop">Nos recettes</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Forum</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item bg-danger text-light" href="#">Visiteur</a>
+                            <a class="dropdown-item bg-danger text-light" data-toggle="modal" data-target="#modalConnect">Utilisateur</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="contact.html" id="navbardrop">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--corp de la page-->
+    <main id="page">
+        <!--carousel-->
+        <section class="container">
+
+
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <!-- The slideshow -->
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <img src="publique/image/slider-index/pate.jpg" alt="Pate">
+                        <div class="carousel-caption">
+                            <h2 class="text-light">Partager vos conseils et astuces</h2>
+                            <a href="#" class="btn btn-outline-danger btn-lg" role="button" target="_blank">Forum</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="publique/image/slider-index/plat.jpg" alt="Plat">
+                        <div class="carousel-caption">
+                            <h2 class="text-light">Découvrez nos recettes</h2>
+                            <a href="#" class="btn btn-outline-danger btn-lg" role="button" target="_blank">Recettes</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="publique/image/slider-index/boutique.jpg" alt="Boutique">
+                        <div class="carousel-caption">
+                            <h2 class="text-light">Une question ? Contacter nous</h2>
+                            <a href="contact.html" class="btn btn-outline-danger btn-lg" role="button"
+                                target="_blank">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+            <!-----section présentation----->
+            <section class="presentation container">
+                <header class="row">
+                    <div class="col-12 justify-content-center bg-danger">
+                        <h1 class="text-light">Présentation</h1>
+                    </div>
+                </header>
+                <div class="row">
+                    <article class="rubrique col-lg-6 col-sm-12">
+                        <h2 class="text-danger">Notre forum </h2>
+                        <img src="publique/image/slider-index/pate.jpg" alt="pate">
+                        <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Quisque sapien velit, aliquet eget commodo nec.</p>
+                    </article>
+                    <article class="rubrique col-lg-6 col-sm-12">
+                        <h2 class="text-danger">Nos recettes </h2>
+                        <img src="publique/image/epicerie-rayons.jpg" alt="epicerie-rayons">
+                        <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Quisque sapien velit, aliquet eget commodo nec.</p>
+                    </article>
+                    <article class="rubrique col-lg-6 col-sm-12">
+                        <h2 class="text-danger">Nos tutos </h2>
+                        <img src="publique/image/fruit-932745_1920.jpg" alt="fruit">
+                        <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Quisque sapien velit, aliquet eget commodo nec.</p>
+                    </article>
+                    <article class="rubrique col-lg-6 col-sm-12">
+                        <h2 class="text-danger">Sélections de restaurants </h2>
+                        <img src="publique/image/sausages-3793699_1920.jpg" alt="saucisse">
+                        <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Quisque sapien velit, aliquet eget commodo nec.</p>
+                    </article>
+                    <article class="rubrique col-lg-6 col-sm-12">
+                        <h2 class="text-danger">Nous contacter </h2>
+                        <img src="publique/image/slider-index/pate.jpg" alt="pate">
+                        <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Quisque sapien velit, aliquet eget commodo nec.</p>
+                    </article>
+                    <article class="rubrique col-lg-6 col-sm-12">
+                        <h2 class="text-danger">Nos nouveautés </h2>
+                        <img src="publique/image/epicerie-rayons.jpg" alt="epicerie-rayons">
+                        <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Quisque sapien velit, aliquet eget commodo nec.</p>
+                    </article>
+                </div>
+            </section>
+            <!--section vidéo-->
+            <section class="videos">
+                <header class="row">
+                    <div class="col-12 justify-content-center bg-danger">
+                        <h1 class="text-light">Nos astuces</h1>
+                    </div>
+                </header>
+                <article>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Sjb6nDKbn5s" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media;
+                         gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nOq2vUoOfA8" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media;
+                         gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/q0MdOCL1V5g" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media;
+                        gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </article>
+            </section>
+            <!-------------slider----------------->
+            <section id="slide">
+                <div class="row">
+                    <div class="col-12 bg-danger">
+                        <h1 class="text-light">Galerie photo</h1>
+                    </div>
+                </div>
+                <div id="slider1" class="container">
+                    <img src="publique/image/slider-index/patate.jpg" alt="patate" id="slide2">
+                    <div id="precedent" onclick="ChangeSlide(-1)">
+                        <</div> <div id="suivant" onclick="ChangeSlide(1)">>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <!------footer/liens--------->
+    <footer class="pied">
+        <aside class="bas container-fluid bg-danger row">
+            <div class="liens col-lg-3 col-sm-3">
+                <ul>
+                    <li><a href="#">Nos news</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="liens col-lg-3  col-sm-3">
+                <ul>
+                    <li><a href="#">Évenements</a></li>
+                    <li><a href="#">La rubrique santé</a></li>
+                    <li><a href="#">Nos conseils</a></li>
+                </ul>
+            </div>
+            <div class="reseaux col-lg-6 col-sm-6">
+                <ul>
+                    <li><a href="https://fr-fr.facebook.com/"><img src="publique/image/logo/facebook.png"
+                                alt="facebook"></a></li>
+                    <li><a href="https://twitter.com/login?lang=fr"><img src="publique/image/logo/twitter.png"
+                                alt="twitter"></a></li>
+                    <li><a href="https://www.instagram.com/?hl=fr"><img src="publique/image/logo/instagram.png"
+                                alt="Instagram"></a></li>
+                    <li><a href="https://www.pinterest.fr/"><img src="publique/image/logo/pinterest.png"
+                                alt="pinterest"></a></li>
+                </ul>
+            </div>
+        </aside>
+        <p class="mention text-danger">&copy;kercode 2019 <a href="mention.html" class="text-danger">Mentions
+                légales.</a>
+            accéder au <a href="#" class="text-danger">site map.</a></p>
+    </footer>
+    <!-------js boite modal------------------------------->
+    <script type="text/javascript" src="publique/script/modal.js"></script>
+    <!------------JS regex & validForm & cookie & Active & slider-------------->
+    <script type="text/javascript" src="publique/script/index.js"></script>
+    <!-----------classe active------------>
+    <script type="text/javascript">
+        menuActive(0);
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
