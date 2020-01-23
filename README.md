@@ -1,1 +1,2 @@
 # Documentation du projet Gourmet !
+[![Maintainability](https://api.codeclimate.com/v1/badges/640436bdd622ab8680fa/maintainability)](https://codeclimate.com/github/yohann-kevin/projet-gourmet/maintainability)
