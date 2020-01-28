@@ -1,6 +1,6 @@
 function submit() {
     let apiUrl = "https://slack.com/api/chat.postMessage";
-    let token = "xoxb-927063493862-924428453572-KcxxtatfIAdX5f2X4DVMsxUh";
+    let token = creds.token;
     let channel = "#bot";
     let prenom = document.getElementById('prenomSlack').value;
     let msg = document.getElementById('commentSlack').value;
