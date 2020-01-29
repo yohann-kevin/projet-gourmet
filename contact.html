@@ -13,6 +13,8 @@
     <!--bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--icone page-->
+    <link rel="icon" href="publique/image/logo/icone.png">
     <!--liens vers feuille de style-->
     <link rel="stylesheet" href="test/opti.css">
     <title>Les fins gourmets</title>
@@ -95,7 +97,6 @@
         <div class="modal fade" id="modalSign">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
-
                     <!-- Modal Header -->
                     <div class="modal-header bg-danger text-light">
                         <h4>Inscription</h4>
@@ -105,7 +106,6 @@
                         <!-- Modal body -->
                         <div class="modal-body">
                             <!--<form id="login" action="traitement.php" method="POST">-->
-
                             <div class="form">
                                 <!-- bouton radio M.-->
                                 <div class="blocRadioSign">
@@ -185,14 +185,14 @@
                                 <div class="form-group">
                                     <p><label for="adresseSign" class="text-dark">Votre adresse</label>
                                         <textarea name="message" id="adresseSign" placeholder="Votre adresse"
-                                            maxlength="100" required></textarea>
-                                    </p><span id="forgetAdress" class="text-danger"></span>
+                                            maxlength="100" onkeyup="search()" required></textarea></p>
+                                    <div id="wrapper" onclick="link()">
+
+                                    </div>
+                                    <span id="forgetAdress" class="text-danger"></span>
                                 </div>
-
                             </div>
-
                         </div>
-
                         <!-- Modal footer -->
                         <div class="modal-footer bg-danger">
                             <p class="validé">
@@ -393,7 +393,8 @@
         </aside>
         <p class="mention text-danger">&copy;kercode 2019 <a href="mention.html" class="text-danger">Mentions
                 légales.</a>
-            accéder au <a href="#" class="text-danger">site map. </a><a href="slack.html" class="text-danger"> Contacter le dev !</a></p>
+            accéder au <a href="#" class="text-danger">site map. </a><a href="slack.html" class="text-danger"> Contacter
+                le dev !</a></p>
     </footer>
 </body>
 <!-------js boite modale------------------------------->

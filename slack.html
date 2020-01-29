@@ -15,6 +15,8 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!--icone-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!--icone page-->
+    <link rel="icon" href="publique/image/logo/icone.png">
     <!--liens vers feuille de style-->
     <link rel="stylesheet" href="test/opti.css">
     <title>Les fins gourmets</title>
@@ -196,8 +198,11 @@
                                 <div class="form-group">
                                     <p><label for="adresseSign" class="text-dark">Votre adresse</label>
                                         <textarea name="message" id="adresseSign" placeholder="Votre adresse"
-                                            maxlength="100" required></textarea>
-                                    </p><span id="forgetAdress" class="text-danger"></span>
+                                            maxlength="100" onkeyup="search()" required></textarea></p>
+                                    <div id="wrapper" onclick="link()">
+
+                                    </div>
+                                    <span id="forgetAdress" class="text-danger"></span>
                                 </div>
                             </div>
                         </div>
@@ -327,10 +332,6 @@
     <script type="text/javascript" src="publique/script/modal.js"></script>
     <!------------JS regex & validForm & cookie & Active & slider-------------->
     <script type="text/javascript" src="publique/script/index.js"></script>
-    <!-----------classe active------------>
-    <script type="text/javascript">
-        menuActive(0);
-    </script>
 </body>
 
 </html>

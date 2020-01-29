@@ -162,6 +162,11 @@ body {
     margin: 40px;
     margin-top:35px;
 }
+.pied .bas .reseaux img:hover{
+    width: 55px;
+    margin: 30px;
+    margin-top: 15px;
+}
 .pied .bas .reseaux ul {
     display: flex;
     text-decoration: none;
