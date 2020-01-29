@@ -88,10 +88,8 @@ function validMessage(event) {
     }
 };
 //-----------------------cookie------------------------------------------
-//fonction qui se déclenche au click
 function masqueCookie() {
     let cookie = document.getElementById('cookie');
-    //fait disparaitre la barre de cookie
     cookie.style.display = "none";
 }
 //---------class active --------------------------------------------
@@ -101,7 +99,7 @@ function menuActive(indexActive) {
 
     element[indexActive].className += " active";
 };
-//---adresse--------
+//---api adresse--------
 function search() {
 
     document.getElementById("wrapper").innerHTML = "";

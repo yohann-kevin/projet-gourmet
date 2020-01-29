@@ -150,17 +150,20 @@ body {
 .pied .bas .liens ul li a {
     color: white;
     text-decoration: none;
-    font-style: italic
+    font-style: italic;
 }
 .pied .bas .liens ul li a:hover {
     color: white;
-    text-decoration: underline
+    text-decoration: underline;
 }
 .pied .bas .reseaux img {
     float: left;
     width: 45px;
     margin: 40px;
     margin-top:35px;
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: ease;
 }
 .pied .bas .reseaux img:hover{
     width: 55px;
