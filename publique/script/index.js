@@ -1,24 +1,20 @@
 let slide = ["publique/image/slider-index/patate.jpg", "publique/image/slider-index/poulet.jpg",
     "publique/image/slider-index/sandwich.jpg", "publique/image/slider-index/saucisse.jpg",
-    "publique/image/slider-index/pizza.jpg", "publique/image/slider-index/plat.jpg"];
+    "publique/image/slider-index/pizza.jpg", "publique/image/slider-index/plat.jpg"
+];
 
 let i = 0;
 
 setInterval(function () {
     document.getElementById('slide2').src = slide[i];
-    //on incrémente la valeur i de 1
     i++;
-    //si i est égale 6 alors i retourne a 0
     if (i == 6) i = 0;
-}, 3000); //3000 = 3 sec 
-//fonction déclanché au clic d'une flèche 
+}, 3000);
+
 function ChangeSlide(sens) {
-    //on concatenne i par le paramtètre (sens)
     i = i + sens;
-    //on soustrait 1 a i
     if (i < 0)
         i = slide.length - 1;
-    //on ajoute 1 a i
     else if (i > slide.length - 1)
         i = 0;
     document.getElementById('slide2').src = slide[i];
@@ -105,3 +101,27 @@ function menuActive(indexActive) {
 
     element[indexActive].className += " active";
 };
+//---adresse--------
+function search() {
+
+    document.getElementById("wrapper").innerHTML = "";
+    let adresse = document.getElementById("adresseSign").value;
+
+    fetch('https://api-adresse.data.gouv.fr/search/?q=%27' + adresse)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (json) {
+            for (let i = 0; i < 5; i++) {
+                let p = document.createElement("p");
+                p.classList.add('list');
+                p.innerText = json.features[i].properties.label;
+                document.getElementById("wrapper").appendChild(p);
+                p.addEventListener('click', function () {
+                    let add = document.getElementById("adresseSign");
+                    add.value = p.textContent;
+                    p.innerHTML = "";
+                });
+            }
+        })
+}

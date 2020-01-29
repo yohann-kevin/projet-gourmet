@@ -11,7 +11,7 @@ function submit() {
         data: {
             "token": token,
             "channel": channel,
-            "text": prenom + " " + mail + " " + msg,
+            "text": "prenom: " + prenom + "\n" + "mail: " + mail + "\n" + "message: " + msg,
             "as_user": user,
         },
         dataType: 'text',

@@ -20,7 +20,7 @@
     <title>Les fins gourmets</title>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -32,7 +32,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
@@ -40,16 +40,6 @@
 <body>
 
     <header class="bandeau">
-        <div id="cookie" class="sticky-top row bg-danger border border-top-0">
-            <span class="col-lg-9 col-sm-6">
-                <p class="text-light">En continuant votre navigation, vous acceptez l'utilisation de cookies.</p>
-            </span>
-            <div class="col-lg-3 col-sm-6">
-                <button class="accepter btn btn-danger" href="#" onclick="masqueCookie()">Accepter</button>
-                <button class="infoCookie btn btn-danger" target="_blank"><a href="https://www.google.com"> En savoir
-                        plus</a></button>
-            </div>
-        </div>
         <div class="connexion container-fluid bg-danger">
             <div class="row">
                 <!----bouton connexion/inscription---->
@@ -265,15 +255,15 @@
             <h1 class="text-center">plopi-plopa ;)</h1>
             <div class="form-group">
                 <label for="prenomSlack">Prenom:</label>
-                <input type="text" class="form-control text-light" id="prenomSlack" placeholder="Prenom ;)" name="prenom">
+                <input type="text" class="form-control" id="prenomSlack" placeholder="Prenom ;)" name="prenom">
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" class="form-control text-light" id="emailSlack" placeholder="Email ;)" name="email">
+                <input type="email" class="form-control" id="emailSlack" placeholder="Email ;)" name="email">
             </div>
             <div class="form-group">
                 <label for="comment">Comment:</label>
-                <textarea class="form-control" rows="5" id="commentSlack" class="text-light" placeholder="Plopi a dit que..."
+                <textarea class="form-control" rows="5" id="commentSlack" placeholder="Plopi a dit que..."
                     name="message"></textarea>
             </div>
             <input class="btn btn-dark" value="Envoyer" id="submit" onclick="submit()">

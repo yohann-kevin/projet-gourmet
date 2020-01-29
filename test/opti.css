@@ -281,6 +281,13 @@ body {
 #modalSign{
     text-align: center;
 }
+#wrapper{
+    cursor: pointer;
+}
+.list:hover{
+    background-color: #dc3545;
+    color: white;
+}
 /**********************************************************/
 /********recette***********/
 .recette .rubrique h2 {
