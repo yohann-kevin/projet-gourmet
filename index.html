@@ -10,6 +10,9 @@
     <meta name="keywords" content="gourmets,recette,cuisine">
     <!--titre-->
     <meta name="title" content="Les fins gourmets">
+    <!---link google-->
+    <meta name="google-signin-scope" content="profile email">
+    <meta name = "google-signin-client_id" content = "991297201856-i8t0ekurllat0825dfs4tdlr6f5qbqn1.apps.googleusercontent.com">
     <!--bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -84,6 +87,7 @@
                             <p>pas encore inscrit ?<button type="button" class="btn" data-toggle="modal"
                                     data-target="#modalSign">Cliquer ici
                                 </button></p>
+                                <div class="g-signin2" data-onsuccess="onSignIn"></div>
                             <p>mot de passe oublié ?<a href="#"> Cliquer ici</a></p>
                         </div>
                         <!-- Modal footer -->
@@ -429,6 +433,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
 </body>
 
 </html>
