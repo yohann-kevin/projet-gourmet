@@ -10,7 +10,7 @@
 
 *Cocher avec un 'x'*
 
-- [] le code est anglais
-- [] Les variables et fonction sont en lowerCamelCase
-- [] Le code a été vérifier
-- [] Aucun autre frameworks n'a été utilisé
+- [ ] le code est anglais
+- [ ] Les variables et fonction sont en lowerCamelCase
+- [ ] Le code a été vérifier
+- [ ] Aucun autre frameworks n'a été utilisé
