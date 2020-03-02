@@ -1,4 +1,4 @@
-<img src="../publique/image/capture.png">
+<img src="publique/image/capture.png">
 
 # Documentation du projet Gourmet !
 
