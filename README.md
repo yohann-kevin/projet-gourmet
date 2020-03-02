@@ -1,3 +1,5 @@
+<img src="../publique/image/capture.png">
+
 # Documentation du projet Gourmet !
 
 ##Note CodeClimate
